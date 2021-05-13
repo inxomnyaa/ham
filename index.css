@@ -1,0 +1,50 @@
+/* Defining variables and main properties   *
+ * I do this because i am lazy and don't    *
+ * want to retype urls. This is no standard */
+ :root{
+	--color_format_0: rgb(0, 0, 0);
+	--color_format_1: rgb(0, 0, 170);
+	--color_format_2: rgb(0, 170, 0);
+	--color_format_3: rgb(0, 170, 170);
+	--color_format_4: rgb(170, 0, 0);
+	--color_format_5: rgb(170, 0, 170);
+	--color_format_6: rgb(255, 170, 0);
+	--color_format_7: rgb(170, 170, 170);
+	--color_format_8: rgb(85, 85, 85);
+	--color_format_9: rgb(85, 85, 255);
+	--color_format_a: rgb(85, 255, 85);
+	--color_format_b: rgb(85, 255, 255);
+	--color_format_c: rgb(255, 85, 85);
+	--color_format_d: rgb(255, 85, 255);
+	--color_format_e: rgb(255, 255, 85);
+	--color_format_f: rgb(255, 255, 255);
+	--color_format_l: bold;
+	--color_format_m: line-through;
+	--color_format_n: underline;
+	--color_format_o: italic;
+	--img_hexagon: url(./images/hexa_tile.png);
+}
+
+body{
+	overflow:hidden;
+}
+body:before{
+	z-index: -1;
+	content: "";
+	background-image: var(--img_hexagon);
+	position:fixed;
+	top:-142px;
+	left:-245px;
+	right:-245px;
+	bottom:-142px;
+	display:block;
+	transform: translate(0%, 0%);
+	animation: move-bg 10s linear 0s infinite normal;
+}
+
+@keyframes move-bg {
+	0%{ 
+		transform: translate(0, 0); }
+	100%{ 
+		transform: translate(245px, 142px); }
+}
